@@ -1,19 +1,39 @@
+/* hey */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%; /* 10px */
+}
 
-body{
+:root {
+    --green: #146010;
+    --white: #ffffff;
+    --nav-height: 8rem;
+}
+
+body {
     font-family: "Roboto Serif", serif;
-    color: rgb(31, 74, 20);
+    color: var(--green);
+    font-size: 1.8rem;
 }
 
 a{
-    color: rgb(80, 151, 98);
+    color: var(--green);
     text-decoration: none;
 }
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 4rem;
+    border: 1px solid var(--green);
+    font-size: 2.2rem;
+}
+
 
 .row{
     max-width: 1180px;
@@ -22,13 +42,42 @@ a{
 
 
 header {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    background-image: url('images/achtergrond.png');
+    background-image: url('images/Designer.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    }
+
+header .row {
+    width: 100%;
 }
 
-nav{
+nav {
     display: flex;
-    gap: 3.75rem;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6rem;
+    height: var(--nav-height);
+}
+
+nav a {
+    font-size: 2.2rem;
+}
+
+.header-text-container {
+    display: flex;
+    align-items: center;
+    height: calc(100% - var(--nav-height));
+}
+.header-text-container p {
+    font-size: 2.4rem;
+    margin: 1rem 0 3rem;
+}
+
+h1 {
+    font-size: 7.5rem;
 }
