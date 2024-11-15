@@ -11,41 +11,73 @@ html {
 }
 
 :root {
-    --green: #146010;
+    --green: #146010ff;
     --white: #ffffff;
+    --black: #010101;
+
     --nav-height: 8rem;
+
+    --fs-h1: 7.5rem;
+    --fs-h2: 6rem;
 }
 
 body {
     font-family: "Roboto Serif", serif;
-    color: var(--green);
+    color: var(--white);
     font-size: 1.8rem;
+    font-weight: 300 ;
+    background-image: url(images/Designer.png);
+    background-size: cover;
 }
 
 a{
-    color: var(--green);
+    color: var(--white);
     text-decoration: none;
 }
 
 .btn {
     display: inline-block;
     padding: 1.2rem 4rem;
-    border: 1px solid var(--green);
+    border: 1px solid var(--white);
     font-size: 2.2rem;
 }
 
+section {
+    padding: 12rem 0;
+}
 
 .row{
     max-width: 1180px;
     margin: 0 auto;
 }
 
+h1,
+h2{
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 7.5rem;
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 15rem;
+    height: 0.3rem;
+    margin-top: 1rem;
+    background-color: var(--green)
+
+}
 
 header {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-image: url('images/Designer.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -66,6 +98,7 @@ nav {
 
 nav a {
     font-size: 2.2rem;
+    
 }
 
 .header-text-container {
@@ -78,6 +111,16 @@ nav a {
     margin: 1rem 0 3rem;
 }
 
-h1 {
-    font-size: 7.5rem;
+/* About me*/
+
+.about-me-box{
+    display: flex;
+}
+
+.about-me-box-image {
+    max-width: 726px;
+}
+
+.about-me-box-image img {
+    max-width: 100%;
 }
