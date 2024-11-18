@@ -13,17 +13,27 @@ html {
 :root {
     --green: #146010ff;
     --white: #ffffff;
+    --off-white: #ffffffc6;
     --black: #010101;
 
     --nav-height: 8rem;
 
     --fs-h1: 7.5rem;
     --fs-h2: 6rem;
+    --fs-h3: 4rem;
+
+    --gutter-xx-small: 2rem;
+    --gutter-x-small: 3rem;
+    --gutter-small: 4rem;
+    --gutter-medium: 6rem;
+    --gutter-large: 8rem;
+    --gutter-huge: 10rem;
+
 }
 
 body {
     font-family: "Roboto Serif", serif;
-    color: var(--white);
+    color: var(--off-white);
     font-size: 1.8rem;
     font-weight: 300 ;
     background-image: url(images/Designer.png);
@@ -31,15 +41,19 @@ body {
 }
 
 a{
-    color: var(--white);
+    color: var(--off-white);
     text-decoration: none;
 }
 
 .btn {
     display: inline-block;
     padding: 1.2rem 4rem;
-    border: 1px solid var(--white);
+    border: 1px solid var(--off-white);
     font-size: 2.2rem;
+}
+
+img {
+    object-fit: contain;
 }
 
 section {
@@ -52,12 +66,14 @@ section {
 }
 
 h1,
-h2{
+h2,
+h3{
+    color: var(--off-white);
     font-weight: 400;
 }
 
 h1 {
-    font-size: 7.5rem;
+    font-size: var(--fs-h1);
 }
 
 h2 {
@@ -73,6 +89,14 @@ h2::after {
     background-color: var(--green)
 
 }
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+/* ---------------------------------------------*/
+/* Header*/
+/* ---------------------------------------------*/
 
 header {
     display: flex;
@@ -111,16 +135,52 @@ nav a {
     margin: 1rem 0 3rem;
 }
 
+/* ---------------------------------------------*/
 /* About me*/
+/* ---------------------------------------------*/
 
-.about-me-box{
+.about-me-box {
+    display: flex; /* Side-by-side alignment */
+    align-items: flex; /* Align text and image at the top */
+    gap: var(--gutter-x-small); /* Space between text and image */
+    margin-top: var(--gutter-x-small)
+}
+
+.about-me-text > * {
+    flex: 1; /* Let the text take up available space */
+    font-size: var(--gutter-xx-small);
+    margin-top: 2rem;
+    color: var(--white); /* Change text color for better contrast */
+}
+
+.about-me-text h2 {
+    font-size: var(--fs-h2);
+    color: var(--green); /* Optional: Add some color to the heading */
+}
+
+.about-me-box-link{
     display: flex;
+    align-items: center;
+    gap: var(--gutter-xx-smallsmall);
 }
 
 .about-me-box-image {
-    max-width: 726px;
+    flex: 1; /* Image container still shares space equally */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
 }
 
 .about-me-box-image img {
-    max-width: 100%;
+    max-width: 70%; /* Adjust this percentage to make the image smaller */
+    height: auto; /* Maintain the image's aspect ratio */
+    border-radius: 1rem; /* Optional: Keep rounded corners */
 }
+
+.about-me-box .li-icon{
+    height: 4.5rem;
+}
+
+/* ---------------------------------------------*/
+/* */
+/* ---------------------------------------------*/
